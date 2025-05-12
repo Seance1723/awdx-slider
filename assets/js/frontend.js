@@ -1,24 +1,15 @@
 jQuery(function($){
-    if (typeof $.fn.owlCarousel !== 'function') return;
+    if ( typeof $.fn.owlCarousel !== 'function' ) return;
 
     $('.awdx-slider').each(function(){
-        var $el  = $(this),
-            cols = parseInt($el.data('cols'),10) || 3;
+        var $el  = $(this)
 
         $el.owlCarousel({
             loop: true,
-            margin: 10,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-            slideBy: 1,
-            responsive: {
-                0:   { items: 1 },
-                576: { items: 2 },
-                768: { items: cols }
-            }
+    margin: 30,
+    dots: true,
+    nav: true,
+    items: 2,
         });
     });
 });
